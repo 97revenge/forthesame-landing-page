@@ -90,7 +90,6 @@ export const SameFitnessLogo = () => {
       ctx.lineJoin = "round";
 
       // Animate running figure
-      const legAngle = Math.sin(progress * Math.PI * 2) * 30;
       const armAngle = Math.cos(progress * Math.PI * 2) * 45;
 
       ctx.beginPath();

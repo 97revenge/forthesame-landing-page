@@ -6,7 +6,6 @@ import { motion, AnimatePresence } from "framer-motion";
 
 import { Instagram, X } from "lucide-react";
 import Link from "next/link";
-import { SameFitnessLogo } from "./same-fitness-logo";
 
 const AnimatedLogo = () => {
   return (
@@ -22,26 +21,12 @@ const AnimatedLogo = () => {
   );
 };
 
-const RunnerIcon = ({ className }: { className?: string }) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    className={className}
-  >
-    <path d="M13 4v16M7 12h14M7 20l5-5M7 4l5 5" />
-  </svg>
-);
-
 export function SameFitnessLanding() {
-  const [mounted, setMounted] = useState(false);
+  const [_mounted, setMounted] = useState(false);
   const [showCTA, setShowCTA] = useState(false);
 
   useEffect(() => {
+    console.log(_mounted);
     setMounted(true);
     const timer = setTimeout(() => setShowCTA(true), 15000);
     return () => clearTimeout(timer);
@@ -74,17 +59,6 @@ export function SameFitnessLanding() {
       transition: {
         duration: 0.8,
         ease: [0.04, 0.62, 0.23, 0.98],
-      },
-    },
-  };
-
-  const runnerVariants = {
-    run: {
-      x: [0, 10, 0],
-      transition: {
-        repeat: Infinity,
-        duration: 1.5,
-        ease: "easeInOut",
       },
     },
   };
@@ -216,7 +190,7 @@ export function SameFitnessLanding() {
               Limited Time Offer!
             </h2>
             <p className="text-[#CDE316]/90 text-sm mb-3">
-              Get 15% off on our Ultra Comfort Running Shoes. Don't miss out!
+              Get 15% off on our Ultra Comfort Running Shoes. Dont miss out!
             </p>
             <Link
               href="#"
@@ -227,14 +201,6 @@ export function SameFitnessLanding() {
           </motion.div>
         )}
       </AnimatePresence>
-
-      {mounted && (
-        <style jsx global>{`
-          body {
-            background-color: #11180c;
-          }
-        `}</style>
-      )}
     </div>
   );
 }
