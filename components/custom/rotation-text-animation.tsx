@@ -17,11 +17,11 @@ export const RotateText = () => {
   // Determine color based on the current word
   const getColor = (word: unknown) => {
     if (word === "Corredores")
-      return "animate-gradient bg-gradient-to-r from-green-600 via-lime-200 to-green-300 bg-clip-text text-transparent";
+      return "text-4xl animate-gradient bg-gradient-to-r from-green-600 via-lime-200 to-green-300 bg-clip-text text-transparent";
     if (word === "Atletas")
-      return "animate-gradient bg-gradient-to-r from-blue-600 via-sky-200 to-blue-300 bg-clip-text text-transparent";
+      return " text-4xl  animate-gradient bg-gradient-to-r from-blue-600 via-sky-200 to-blue-300 bg-clip-text text-transparent";
     if (word === "Jogadores")
-      return "animate-gradient bg-gradient-to-r from-red-600 via-yellow-200 to-red-300 bg-clip-text text-transparent";
+      return " text-4xl  animate-gradient bg-gradient-to-r from-red-600 via-yellow-200 to-red-300 bg-clip-text text-transparent";
     return "text-black"; // default color
   };
 
@@ -34,7 +34,7 @@ export const RotateText = () => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 50 }}
           transition={{ duration: 0.5 }}
-          className={`bg-red-200 text-start font-display text-2xl font-bold tracking-[-0.02em] drop-shadow-sm md:text-2xl md:leading-[5rem] ${getColor(
+          className={`text-start font-display text-7xl font-bold tracking-[-0.02em] drop-shadow-sm md:text-4xl md:leading-[5rem] ${getColor(
             words[index]
           )}`}
         >
