@@ -1,46 +1,7 @@
 import Marquee from "../ui/marquee";
 import { ProductCard } from "../product-card";
 
-const reviews = [
-  {
-    name: "Jack",
-    stars: "@jack",
-    body: "I've never seen anything like this before. It's amazing. I love it.",
-    img: "https://avatar.vercel.sh/jack",
-  },
-  {
-    name: "Jill",
-    stars: "@jill",
-    body: "I don't know what to say. I'm speechless. This is amazing.",
-    img: "https://avatar.vercel.sh/jill",
-  },
-  {
-    name: "John",
-    stars: "@john",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/john",
-  },
-  {
-    name: "Jane",
-    stars: "@jane",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/jane",
-  },
-  {
-    name: "Jenny",
-    stars: "@jenny",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/jenny",
-  },
-  {
-    name: "James",
-    stars: "@james",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/james",
-  },
-];
-
-const affiliate = [
+const SuplementAffiliate = [
   {
     name: "Creatine Monohydrate 500g Soldiers Nutrition Sabor Natural",
     stars: 4.6,
@@ -50,57 +11,58 @@ const affiliate = [
     affiliateLink: "https://mercadolivre.com/sec/2mRVWix",
   },
   {
-    name: "Whey Protein Isolate 900g Vanilla Supreme",
+    name: "Creatina Monohidratada Pura 500g Dark Lab Unidade",
     stars: 4.8,
     moreSeller: true,
-    value: 145.0,
-    img: "https://http2.mlstatic.com/D_NQ_NP_123456-MLU45345123456_092024-O.webp",
-    affiliateLink: "https://mercadolivre.com/sec/3kABXyz",
+    value: 74.9,
+    img: "https://http2.mlstatic.com/D_NQ_NP_726833-MLU77492684902_072024-O.webp",
+    affiliateLink: "https://mercadolivre.com/sec/1uLNAoa",
   },
   {
-    name: "BCAA 2400mg 120 Capsules MuscleTech",
-    stars: 4.5,
+    name: "Suplemento Monohidratada em Pó Max Titanium Pote 3000mg Pó sem Sabor",
+    stars: 4.8,
     moreSeller: false,
-    value: 85.5,
-    img: "https://http2.mlstatic.com/D_NQ_NP_789012-MLU67891234567_102024-O.webp",
-    affiliateLink: "https://mercadolivre.com/sec/4nQYZwx",
+    value: 58.2,
+    img: "https://http2.mlstatic.com/D_NQ_NP_607880-MLU76445325347_052024-O.webp",
+    affiliateLink: "https://mercadolivre.com/sec/2vcrLNn",
   },
   {
-    name: "Glutamine Powder 500g Power Supplement",
+    name: "Dux Nutrition Creatina Monohidratada Pote 300G Em Po Sem Sabor",
+    stars: 4.7,
+    moreSeller: false,
+    value: 60.34,
+    img: "https://http2.mlstatic.com/D_NQ_NP_809764-MLU78795129554_092024-O.webp",
+    affiliateLink: "https://mercadolivre.com/sec/1gs8ZM6",
+  },
+  {
+    name: "Suplemento em Pó Creatine - 300g - Probiótica",
     stars: 4.7,
     moreSeller: true,
-    value: 99.9,
-    img: "https://http2.mlstatic.com/D_NQ_NP_456789-MLU12345678901_112024-O.webp",
-    affiliateLink: "https://mercadolivre.com/sec/5jLTYuz",
+    value: 48.1,
+    img: "https://http2.mlstatic.com/D_NQ_NP_630961-MLU74423532390_022024-O.webp",
+    affiliateLink: "https://mercadolivre.com/sec/2pgiGdj",
   },
   {
-    name: "Pre-Workout 300g Watermelon Blast",
-    stars: 4.3,
-    moreSeller: false,
-    value: 67.8,
-    img: "https://http2.mlstatic.com/D_NQ_NP_234567-MLU34567890123_122024-O.webp",
-    affiliateLink: "https://mercadolivre.com/sec/6qWVXyz",
-  },
-  {
-    name: "Omega-3 Fish Oil 1000mg 60 Softgels Health First",
-    stars: 4.9,
+    name: "Creatina Monohidratada Pura 1kg Dark Lab Unidade Sem sabor",
+    stars: 4.8,
     moreSeller: true,
-    value: 49.99,
-    img: "https://http2.mlstatic.com/D_NQ_NP_345678-MLU45678901234_012025-O.webp",
-    affiliateLink: "https://mercadolivre.com/sec/7lRMVyz",
+    value: 155.8,
+    img: "https://http2.mlstatic.com/D_NQ_NP_893522-MLU76546474137_052024-O.webp",
+    affiliateLink: "https://mercadolivre.com/sec/2hGaryw",
   },
   {
-    name: "Vitamin D3 2000 IU 120 Capsules Sunshine Labs",
-    stars: 4.6,
+    name: "Creatina Monohidratada Pote 300g 100% Pura Soldiers Nutrition",
+    stars: 4.8,
     moreSeller: false,
-    value: 40.5,
-    img: "https://http2.mlstatic.com/D_NQ_NP_567890-MLU67890123456_022025-O.webp",
-    affiliateLink: "https://mercadolivre.com/sec/8mNXVwx",
+    value: 54.19,
+    img: "https://http2.mlstatic.com/D_NQ_NP_879854-MLU75393162237_032024-O.webp",
+    affiliateLink: "https://mercadolivre.com/sec/2cWAjew",
   },
 ];
 
-const firstRow = affiliate.slice(0, reviews.length / 2);
-const secondRow = affiliate.slice(reviews.length / 2);
+const firstRow = SuplementAffiliate.slice(0, SuplementAffiliate.length / 2);
+const secondRow = SuplementAffiliate.slice(SuplementAffiliate.length / 2);
+// const thirdRow = affiliate.slice(reviews.length / 2);
 
 export const AffiliateMarquee = () => {
   return (
@@ -131,6 +93,21 @@ export const AffiliateMarquee = () => {
           />
         ))}
       </Marquee>
+      <div className="pointer-events-none absolute inset-y-0 left-full w-1/4  bg-gradient-to-l from-pink-600/10  dark:from-background"></div>
+      <div className="pointer-events-none absolute inset-y-0 right-full w-1/4 bg-gradient-to-r from-pink-600/10    dark:from-background"></div>
+      {/* <Marquee reverse pauseOnHover className="[--duration:20s]">
+        {thirdRow.map((review, id) => (
+          <ProductCard
+            key={id}
+            affiliateLink={review.affiliateLink}
+            name={review.name}
+            moreSeller={review.moreSeller}
+            img={review.img}
+            stars={review.stars}
+            value={review.value}
+          />
+        ))}
+      </Marquee> */}
       {/* <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white dark:from-background"></div>
       <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white dark:from-background"></div> */}
     </div>

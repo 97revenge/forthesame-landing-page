@@ -17,7 +17,7 @@ const AnimatedLogo = () => {
       <div className="transition-all w-screen  flex justify-center items-center ">
         <h1 className="transition-all mb-4 text-5xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
           <span className="transition-all text-5xl  text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-[#C4E716]">
-            Same Fitness ™
+            Same Fitness™
           </span>{" "}
         </h1>
       </div>
